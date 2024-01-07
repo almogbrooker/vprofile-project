@@ -33,7 +33,7 @@ sudo -i -u postgres psql -c "CREATE DATABASE sonarqube OWNER sonar;"
 sudo -i -u postgres psql -c "GRANT ALL PRIVILEGES ON DATABASE sonarqube to sonar;"
 systemctl restart  postgresql
 #systemctl status -l   postgresql
-netstat -tulpena | grep postgres
+ss -tulpena | grep postgres
 sudo mkdir -p /sonarqube/
 cd /sonarqube/
 sudo curl -O https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-8.3.0.34182.zip
